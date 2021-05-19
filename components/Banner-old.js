@@ -21,7 +21,7 @@ const letterAni = {
   },
 };
 
-const Banner = ({ hasBottom = false }) => {
+const Banner = () => {
   const [playMarquee, setPlayMarquee] = useState(false);
 
   useEffect(() => {
@@ -30,25 +30,11 @@ const Banner = ({ hasBottom = false }) => {
     }, 2000);
   }, []);
   return (
-    <>
-      <motion.div className="banner" variants={banner}>
-        {!hasBottom ? (
-          <>
-            <BannerRowTop
-              title={"happy"}
-              // {"brand"}
-            />
-            <BannerRowCenter
-              title={"wealth"}
-              // {"experience"}
-              playMarquee={playMarquee}
-            />
-          </>
-        ) : (
-          <BannerRowBottom title={"invite"} />
-        )}
-      </motion.div>
-    </>
+    <motion.div className="banner" variants={banner}>
+      <BannerRowTop title={"fola"} />
+      <BannerRowCenter title={"shayo"} playMarquee={playMarquee} />
+      {/* <BannerRowBottom title={"Dec 25"} /> */}
+    </motion.div>
   );
 };
 
@@ -59,9 +45,8 @@ const AnimatedLetters = ({ title, disabled }) => (
     initial="initial"
     animate="animate"
   >
-    {[...title].map((letter, index) => (
+    {[...title].map((letter) => (
       <motion.span
-        key={index}
         className="row-letter"
         variants={disabled ? null : letterAni}
       >
@@ -87,12 +72,7 @@ const BannerRowTop = ({ title }) => {
         }}
         className="row-col"
       >
-        <span className="row-message">
-          {/* We are specialised in setting up the foundation of your brand and
-          setting you up for success. */}
-          The secret to wealth is in your happiness. Influence others by
-          spreading your joy around.
-        </span>
+        <span className="row-message">@ 50.</span>
       </motion.div>
     </div>
   );

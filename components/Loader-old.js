@@ -56,16 +56,21 @@ const Loader = ({ setLoading }) => {
         exit="exit"
         className="loader-inner"
       >
-        <ImageBlock variants={item} id="image-1" />
+        {/* <ImageBlock variants={item} id="image-1" /> */}
         <motion.div variants={itemMain} className="transition-image">
           <motion.img
-            layoutId="main-image-1"
-            src={process.env.PUBLIC_URL + `/images/image-2.jpg`}
+            // layoutId="main-image-1"
+            layoutId="logo"
+            // src={process.env.PUBLIC_URL + `/images/image-2.jpg`}
+            // src={`/images/homepage/fola-at-50-image-2.png`}
+            src={`/images/logo.svg`}
+            width={250}
+            height={252}
           />
         </motion.div>
-        <ImageBlock variants={item} id="image-3" />
+        {/* <ImageBlock variants={item} id="image-3" />
         <ImageBlock variants={item} id="image-4" />
-        <ImageBlock variants={item} id="image-5" />
+        <ImageBlock variants={item} id="image-5" /> */}
       </motion.div>
     </motion.div>
   );
@@ -82,8 +87,9 @@ export const ImageBlock = ({ posX, posY, variants, id }) => {
       }}
     >
       <Image
-        src={process.env.PUBLIC_URL + `/images/${id}.webp`}
-        fallback={process.env.PUBLIC_URL + `/images/${id}.jpg`}
+        // src={process.env.PUBLIC_URL + `/images/${id}.webp`}
+        src={`/images/homepage/fola-at-50-${id}.png`}
+        // fallback={process.env.PUBLIC_URL + `/images/${id}.jpg`}
         alt={id}
       />
     </motion.div>

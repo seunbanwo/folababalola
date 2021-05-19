@@ -1,14 +1,19 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Gallery from "../components/Gallery";
-
+// import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 // const Index = () => <Gallery />;
 
 // export default Index;
 
+// import Banner from "../components/Banner-old";
+// import Loader from "../components/Loader-old";
+// import Header from "../components/Header-old";
+
+// Components
+// import Header from "../components/Header";
+import Layout from "../components/Layout";
 import Banner from "../components/Banner";
 import Loader from "../components/Loader";
-import Header from "../components/Header";
 
 function Index() {
   const [loading, setLoading] = useState(true);
@@ -26,9 +31,7 @@ function Index() {
           <Loader setLoading={setLoading} />
         </motion.div>
       ) : (
-        <>
-          <Header />
-          <Gallery />
+        <Layout>
           <Banner />
 
           {/* {!loading && (
@@ -36,13 +39,12 @@ function Index() {
               <motion.img
                 transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
                 // src={process.env.PUBLIC_URL + `/images/image-2.jpg`}
-                // src={`/images/fola-babalola50-cover.png`}
-                src={`/images/fola-in-white.jpg`}
+                src={`/images/image-2.jpg`}
                 layoutId="main-image-1"
               />
             </div>
           )} */}
-        </>
+        </Layout>
       )}
     </>
   );

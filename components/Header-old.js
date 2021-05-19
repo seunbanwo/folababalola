@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 const Header = () => {
   return (
@@ -15,37 +14,29 @@ const Header = () => {
       className="header"
     >
       <div className="header-inner">
-        {/* <div className='logo'>Ollie</div> */}
         <div className="logo">
-          {/* <Link href="/">fola</Link> */}
-          <a href="/">fola</a>
-          {/* fola */}
+          {/* <img src="/images/fola-logo.png" alt="logo" srcset="" /> */}
+          FOLA
         </div>
         <nav className="nav">
           <li>
-            <a href="/fola-at-fifty">Fola at 50</a>
-          </li>
-          <li>
-            <a href="/fola-at-fifty/rsvp">RSVP</a>
+            <a href="/fola-at-50/checkout">RSVP</a>
           </li>
           {/* <li>
-            <a href='/design'>Design</a>
+            <a href="/strategy">Strategy</a>
           </li>
           <li>
-            <a href='/strategy'>Strategy</a>
+            <a href="/cases">Cases</a>
           </li>
           <li>
-            <a href='/cases'>Cases</a>
+            <a href="/about">About</a>
           </li>
           <li>
-            <a href='/about'>About</a>
-          </li>
-          <li>
-            <a href='/why'>Why work with us?</a>
+            <a href="/why">Why work with us?</a>
           </li> */}
         </nav>
-        <div className="link">
-          <a href="/fola-at-fifty">Fola at 50</a>
+        <div className="contact">
+          <a href="/fola-at-fifty/checkout">RSVP</a>
         </div>
         <div className="hamburger-menu">
           <span></span>

@@ -26,11 +26,9 @@
         font-size: 3.2rem;
         flex: 4;
       }
-      width: 140px;
-      img {
-        width: 200px;
-        /* height: 300px; */
-        object-fit: cover;
+      a {
+        text-decoration: none;
+        color: $black;
       }
     }
     .nav {
@@ -53,7 +51,7 @@
         }
       }
     }
-    .contact {
+    .link {
       @media (max-width: $layout-breakpoint-medium) {
         flex: 1;
       }

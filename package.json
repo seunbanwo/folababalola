@@ -10,6 +10,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/styles": "^4.11.4",
     "framer-motion": "latest",
     "isomorphic-unfetch": "^3.0.0",
     "next": "latest",

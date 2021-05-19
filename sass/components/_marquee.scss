@@ -10,9 +10,7 @@ $move-final: calc(-50%);
   .marquee__inner {
     width: fit-content;
     display: flex;
-    // position: relative;
-    position: fixed;
-    bottom: 0;
+    position: relative;
     transform: translate3d($move-initial, 0, 0);
     animation: marquee 5s linear infinite;
     animation-play-state: paused;

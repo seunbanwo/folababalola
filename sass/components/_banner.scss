@@ -1,19 +1,10 @@
 .banner {
   z-index: 100;
-  position: fixed;
-  top: 0;
-  // bottom: 0;
-  pointer-events: none;
-
+  position: relative;
   .banner-row {
-    position: absolute;
-    left: 20px;
-    margin-top: 0px;
-
     overflow: hidden;
     display: flex;
     align-items: center;
-
     @media (max-width: $layout-breakpoint-medium) {
       &:first-child {
         margin-top: 48px;
@@ -29,63 +20,21 @@
     &.right {
       justify-content: flex-end;
     }
-    .row-title {
+    .row-title,
+    .row-letter {
       font-size: 28rem;
       font-weight: 500;
       position: relative;
-      color: #f9fbf8;
       letter-spacing: -0.8rem;
-      // display: inline-block;
+      display: inline-block;
       white-space: nowrap;
       @media (max-width: $layout-breakpoint-xsmall) {
         font-size: 13rem;
       }
     }
-    .row-letter {
-      font-size: 100px;
-      // text-align: center;
-      position: relative;
-      bottom: -100px;
-      // z-index: 1;
-      color: #f9fbf8;
-      // left: 50%;
-      // transform: translateX(-50%);
-      // pointer-events: none;
-
-      // font-size: 28rem;
-      font-weight: 500;
-      // position: relative;
-      letter-spacing: -0.8rem;
-      // display: inline-block;
-      white-space: nowrap;
-      // @media (max-width: $layout-breakpoint-xsmall) {
-      //   font-size: 13rem;
-      // }
-
-      @media screen and (min-width: 600px) {
-        font-size: 140px;
-        // bottom: -130px;
-      }
-
-      @media screen and (min-width: 800px) {
-        font-size: 180px;
-        // bottom: -170px;
-      }
-
-      @media screen and (min-width: 1000px) {
-        font-size: 220px;
-        // bottom: -200px;
-      }
-      @media screen and (min-width: 1200px) {
-        font-size: 280px;
-        // bottom: -260px;
-      }
-    }
     .row-col {
       width: 50%;
       display: flex;
-      color: #f9fbf8;
-
       align-content: center;
       justify-content: center;
       @media (max-width: $layout-breakpoint-medium) {

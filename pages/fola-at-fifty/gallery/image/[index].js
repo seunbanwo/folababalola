@@ -1,6 +1,6 @@
 import * as React from "react";
-import SingleImage from "../../components/SingleImage";
-import { images } from "../../constants";
+import SingleImage from "../../../../components/SingleImage";
+import { images } from "../../../../constants";
 const Page = ({ index }) => {
   return <SingleImage index={index} />;
 };
