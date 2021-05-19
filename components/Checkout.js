@@ -29,16 +29,21 @@ function Checkout() {
       setScriptLoaded(true);
     }
 
-    if (typeof window != undefined && eventCount == 1 && scriptLoaded == true) {
+    if (
+      window.EBWidgets != undefined &&
+      eventCount == 1 &&
+      scriptLoaded == true
+    ) {
       // console.log("there you go");
       // const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
       const vh = Math.max(
         document.documentElement.clientHeight || 0,
         window.innerHeight || 0
       );
-      const ebWidget = window.EBWidgets;
 
-      ebWidget.createWidget({
+      // const ebWidget = window.EBWidgets;
+
+      window.EBWidgets.createWidget({
         // Required
         widgetType: "checkout",
         eventId: "155718792099",
