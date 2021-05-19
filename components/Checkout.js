@@ -20,7 +20,9 @@ function Checkout() {
     }
 
     //Check if window and script is loaded`
-    if (typeof window != undefined && scriptLoaded) {
+    if (typeof window === undefined && !scriptLoaded) {
+      console.log("oh no");
+    } else {
       console.log("there you go");
       window.EBWidgets.createWidget({
         // Required
