@@ -1,20 +1,27 @@
 import { useEffect, useState } from "react";
 
 function Checkout() {
-  const [isEventbriteLoaded, setEventbriteState] = useState(false);
+  const [scriptLoaded, setScriptLoaded] = useState(false);
 
   useEffect(() => {
-    var callback = function () {
-      console.log("Order complete!");
-    };
-    const eventScript = document.createElement("script");
-    eventScript.src = "https://www.eventbrite.com/static/widgets/eb_widgets.js";
-    document.body.appendChild(eventScript);
-    if (window.EBWidgets !== undefined) {
-      setEventbriteState(true);
+    let eventScript;
+    const event = document.getElementById("fola-event-script");
+
+    if (event == null) {
+      eventScript = document.createElement("script");
+      eventScript.setAttribute("async", ""); // Or defer or nothing
+      eventScript.setAttribute("id", "fola-event-script");
+      eventScript.src =
+        "https://www.eventbrite.com/static/widgets/eb_widgets.js";
+      const position = document.querySelector("body"); // Or any other location , example head
+      position.appendChild(eventScript);
+      // document.body.appendChild(eventScript);
+      setScriptLoaded(true);
     }
 
-    if (isEventbriteLoaded) {
+    //Check if window and script is loaded`
+    if (typeof window != undefined && scriptLoaded) {
+      console.log("there you go");
       window.EBWidgets.createWidget({
         // Required
         widgetType: "checkout",
@@ -26,12 +33,8 @@ function Checkout() {
         onOrderComplete: callback, // Method called when an order has successfully completed
       });
     }
-    return () => {
-      document.body.removeChild(eventScript);
-    };
-  }, [isEventbriteLoaded]);
+  }, [scriptLoaded]);
 
   return <div id="eventbrite-widget-container-155718792099" />;
 }
-
 export default Checkout;
