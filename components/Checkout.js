@@ -1,6 +1,19 @@
 import { useEffect, useState } from "react";
+import { Grid, CircularProgress } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+    "& > * + *": {
+      marginLeft: theme.spacing(2),
+    },
+    minHeight: "100vh",
+  },
+}));
 
 function Checkout() {
+  const classes = useStyles();
   const [scriptLoaded, setScriptLoaded] = useState(false);
 
   useEffect(() => {
@@ -89,11 +102,16 @@ function Checkout() {
         // cleanup;
         // console.log("cleanup2");
       };
-    }, 5000);
+    }, 2000);
   }, []);
 
   return !scriptLoaded ? (
-    <div>loading</div>
+    <div className={classes.root}>
+      {/* <CircularProgress /> */}
+      <Grid container alignItems={"center"} justify={"center"}>
+        <CircularProgress />
+      </Grid>
+    </div>
   ) : (
     <div id="eventbrite-widget-container-155718792099" />
   );
