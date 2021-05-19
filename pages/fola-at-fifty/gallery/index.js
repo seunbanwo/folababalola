@@ -1,7 +1,7 @@
 import Gallery from "../../components/Gallery";
 
-function Gallery() {
+function MyGallery() {
   return <Gallery />;
 }
 
-export default Gallery;
+export default MyGallery;
