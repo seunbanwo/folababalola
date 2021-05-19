@@ -10,10 +10,10 @@ function Checkout() {
     ).length;
     // document.getElementById("fola-event-script");
 
-    console.log(eventCount);
+    // console.log(eventCount);
 
     if (scriptLoaded == false) {
-      console.log("creatScript");
+      // console.log("creatScript");
       // const script = document.createElement('script');
       eventScript = document.createElement("script");
 
@@ -30,12 +30,12 @@ function Checkout() {
     }
 
     if (typeof window != undefined && eventCount == 1 && scriptLoaded == true) {
-      console.log("there you go");
+      // console.log("there you go");
       // const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-      // const vh = Math.max(
-      //   document.documentElement.clientHeight || 0,
-      //   window.innerHeight || 0
-      // );
+      const vh = Math.max(
+        document.documentElement.clientHeight || 0,
+        window.innerHeight || 0
+      );
       const ebWidget = window.EBWidgets;
 
       ebWidget.createWidget({
@@ -45,21 +45,11 @@ function Checkout() {
         iframeContainerId: "eventbrite-widget-container-155718792099",
 
         // Optional
-        iframeContainerHeight: 568, // vh, // Widget height in pixels. Defaults to a minimum of 425px if not provided
+        iframeContainerHeight: vh, // 568, // Widget height in pixels. Defaults to a minimum of 425px if not provided
 
         onOrderComplete: callback, // Method called when an order has successfully completed
       });
     }
-
-    //This is not necessary but a check if script is required in some other part of the code`
-    // if (typeof window === undefined && !scriptLoaded) {
-
-    // }
-
-    // check if script is loaded
-    // if (scriptLoaded == true) {
-
-    // }
 
     var callback = function () {
       console.log("Order complete!");
