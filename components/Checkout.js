@@ -10,13 +10,8 @@ function Checkout() {
     const eventScript = document.createElement("script");
     eventScript.src = "https://www.eventbrite.com/static/widgets/eb_widgets.js";
     document.body.appendChild(eventScript);
-    //   window.addEventListener("message", this.receiveMessage, false);
     if (window.EBWidgets !== undefined) {
       setEventbriteState(true);
-      console.log("eventbritestate true");
-    } else {
-      //   setEventbriteState(false);
-      console.log("eventbritestate false");
     }
 
     if (isEventbriteLoaded) {
