@@ -3,8 +3,6 @@ import App from "next/app";
 import { AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import "../sass/main.scss";
 
-// import "../styles.scss";
-
 class MyApp extends App {
   render() {
     const { Component, pageProps, router } = this.props;

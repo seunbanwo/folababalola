@@ -10,7 +10,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@zeit/next-sass": "^1.0.1",
     "framer-motion": "latest",
     "isomorphic-unfetch": "^3.0.0",
     "next": "latest",

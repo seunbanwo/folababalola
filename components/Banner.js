@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-// import bannerStyle from "./styles/Banner.module.scss";
-
 const banner = {
   animate: {
     transition: {
