@@ -169,7 +169,7 @@ function Jubilee() {
               <Grid container justify={"space-around"} spacing={10}>
                 <Grid item xs={6} sm={6} md={3}>
                   <a
-                    href="/file/Fola_Babalola_At_50.pdf"
+                    href="https://drive.google.com/file/d/1IRzNVgsUL0m91Ge8BumG_Yubc-FQcSnA/view?usp=sharing"
                     download="Fola_Babalola_At_50.pdf"
                   >
                     <Button
