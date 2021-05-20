@@ -40,11 +40,6 @@ function Jubilee() {
       ? document.querySelector("body").classList.add("loading")
       : document.querySelector("body").classList.remove("loading");
   }, [loading]);
-  // useEffect(() => {
-  //   loading
-  //     ? document.querySelector("body").classList.add("loading")
-  //     : document.querySelector("body").classList.remove("loading");
-  // }, []);
 
   useEffect(() => {
     setTimeout(() => {
@@ -119,7 +114,7 @@ function Jubilee() {
             <Container maxWidth="md">
               <Grid container justify={"center"} spacing={8}>
                 <Grid item xs={10}>
-                  <Typography variant={"h6"} align={"center"}>
+                  <Typography variant={"h5"} align={"center"}>
                     Between the white shores and warm Carribean waters, you'll
                     find a vacation sanctuary, a temple of tranquility where
                     you'll be able to enjoy nature in its purest form. Located

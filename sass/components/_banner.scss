@@ -10,6 +10,11 @@
         margin-top: 48px;
       }
     }
+    @media (max-width: $layout-breakpoint-medium) {
+      &:second-child {
+        margin-top: 48px;
+      }
+    }
     &.center {
       justify-content: center;
       text-align: center;
@@ -51,11 +56,32 @@
         justify-content: flex-start;
       }
       .row-message {
+        /* Medium devices (landscape tablets, 768px and up) */
+
         font-weight: 500;
         font-size: 1.8rem;
         line-height: 2.6rem;
         width: 320px;
         color: $black;
+
+        /* Extra small devices (phones, 600px and down) */
+        // @media only screen and (max-width: 480px) {
+        //   position: fixed;
+        //   top: 70vh;
+        // }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        // position: fixed;
+        // top: 70vh;
+
+        // @media only screen and (min-width: 480px) {
+        //   // padding-bottom: 500px;
+        //   position: relative;
+        // }
+
+        // @media (min-width: $layout-breakpoint-small) {
+        //   position: relative;
+        // }
       }
     }
     .scroll {
@@ -99,18 +125,50 @@
   align-items: center;
   justify-content: center;
   // padding-bottom: 1800px;
-  @media (max-width: $layout-breakpoint-xsmall) {
-    padding-bottom: 500px;
+  // @media (max-width: $layout-breakpoint-xsmall) {
+  //   padding-bottom: 500px;
+  //   // padding-bottom: 0px;
+  // }
+  // @media (max-width: $layout-breakpoint-small) {
+  //   padding-bottom: 1000px;
+  //   // padding-bottom: 0px;
+  // }
+  // @media (max-width: $layout-breakpoint-medium) {
+  //   padding-bottom: 1500px;
+  //   // padding-bottom: 768px;
+  // }
+  // @media (max-width: $layout-breakpoint-large) {
+  //   padding-bottom: 1800px;
+  //   // padding-bottom: 0px;
+  // }
+
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 480px) {
+    padding-bottom: 0px;
   }
-  @media (max-width: $layout-breakpoint-small) {
-    padding-bottom: 1000px;
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 480px) {
+    // padding-bottom: 500px;
+    padding-bottom: 0px;
   }
-  @media (max-width: $layout-breakpoint-medium) {
-    padding-bottom: 1500px;
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 960px) {
+    padding-bottom: 1700px;
   }
-  @media (max-width: $layout-breakpoint-large) {
-    padding-bottom: 1800px;
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 1440px) {
+    padding-bottom: 2500px;
   }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1920px) {
+    // padding-bottom: 1800px;
+    padding-bottom: 3000px;
+  }
+
   img {
     width: 800px;
     display: flex;
