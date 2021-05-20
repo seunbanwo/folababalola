@@ -51,6 +51,16 @@
           display: none;
         }
       }
+      @media only screen and (max-width: 600px) {
+        &:last-child {
+          position: fixed;
+          top: 75vh;
+          display: block;
+          padding-left: 30px;
+          padding-right: 40px;
+        }
+      }
+
       @media (max-width: $layout-breakpoint-xsmall) {
         width: 100%;
         justify-content: flex-start;
@@ -63,25 +73,6 @@
         line-height: 2.6rem;
         width: 320px;
         color: $black;
-
-        /* Extra small devices (phones, 600px and down) */
-        // @media only screen and (max-width: 480px) {
-        //   position: fixed;
-        //   top: 70vh;
-        // }
-
-        /* Small devices (portrait tablets and large phones, 600px and up) */
-        // position: fixed;
-        // top: 70vh;
-
-        // @media only screen and (min-width: 480px) {
-        //   // padding-bottom: 500px;
-        //   position: relative;
-        // }
-
-        // @media (min-width: $layout-breakpoint-small) {
-        //   position: relative;
-        // }
       }
     }
     .scroll {
