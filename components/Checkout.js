@@ -1,19 +1,7 @@
 import { useEffect, useState } from "react";
-import { Grid, CircularProgress } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    "& > * + *": {
-      marginLeft: theme.spacing(2),
-    },
-    minHeight: "100vh",
-  },
-}));
+import CenterLoader from "./CenterLoader";
 
 function Checkout() {
-  const classes = useStyles();
   const [scriptLoaded, setScriptLoaded] = useState(false);
 
   useEffect(() => {
@@ -106,12 +94,7 @@ function Checkout() {
   }, []);
 
   return !scriptLoaded ? (
-    <div className={classes.root}>
-      {/* <CircularProgress /> */}
-      <Grid container alignItems={"center"} justify={"center"}>
-        <CircularProgress />
-      </Grid>
-    </div>
+    <CenterLoader />
   ) : (
     <div id="eventbrite-widget-container-155718792099" />
   );

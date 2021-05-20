@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
+// import Link from "next/link";
+import Logo from "./logo";
 
 const Header = () => {
   return (
@@ -18,7 +19,9 @@ const Header = () => {
         {/* <div className='logo'>Ollie</div> */}
         <div className="logo">
           {/* <Link href="/">fola</Link> */}
-          <a href="/">fola</a>
+          <a href="/">
+            <Logo />
+          </a>
           {/* fola */}
         </div>
         <nav className="nav">

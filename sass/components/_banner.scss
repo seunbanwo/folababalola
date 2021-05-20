@@ -28,6 +28,7 @@
       letter-spacing: -0.8rem;
       display: inline-block;
       white-space: nowrap;
+      color: $black;
       @media (max-width: $layout-breakpoint-xsmall) {
         font-size: 13rem;
       }
@@ -54,6 +55,7 @@
         font-size: 1.8rem;
         line-height: 2.6rem;
         width: 320px;
+        color: $black;
       }
     }
     .scroll {
@@ -67,6 +69,7 @@
       justify-content: center;
       flex-direction: column;
       left: 160px;
+      color: $black;
       @media (max-width: $layout-breakpoint-medium) {
         left: 60px;
       }
@@ -95,6 +98,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  // padding-bottom: 1800px;
+  @media (max-width: $layout-breakpoint-xsmall) {
+    padding-bottom: 500px;
+  }
+  @media (max-width: $layout-breakpoint-small) {
+    padding-bottom: 1000px;
+  }
+  @media (max-width: $layout-breakpoint-medium) {
+    padding-bottom: 1500px;
+  }
+  @media (max-width: $layout-breakpoint-large) {
+    padding-bottom: 1800px;
+  }
   img {
     width: 800px;
     display: flex;
