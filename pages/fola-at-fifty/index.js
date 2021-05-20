@@ -168,19 +168,24 @@ function Jubilee() {
             <Container maxWidth="md">
               <Grid container justify={"space-around"} spacing={10}>
                 <Grid item xs={6} sm={6} md={3}>
-                  <Button
-                    variant="contained"
-                    color="secondary"
-                    onClick={() => {
-                      alert("clicked");
-                    }}
-                    // classes={{
-                    //   root: classes.root, // class name, e.g. `classes-nesting-root-x`
-                    //   label: classes.label, // class name, e.g. `classes-nesting-label-x`
-                    // }}
+                  <a
+                    href="/file/Fola_Babalola_At_50.pdf"
+                    download="Fola_Babalola_At_50.pdf"
                   >
-                    Guide
-                  </Button>
+                    <Button
+                      variant="contained"
+                      color="secondary"
+                      // onClick={() => {
+                      //   alert("");
+                      // }}
+                      // classes={{
+                      //   root: classes.root, // class name, e.g. `classes-nesting-root-x`
+                      //   label: classes.label, // class name, e.g. `classes-nesting-label-x`
+                      // }}
+                    >
+                      Guide
+                    </Button>
+                  </a>
                 </Grid>
                 <Grid item xs={6} sm={6} md={3}>
                   <a href="/fola-at-fifty/rsvp">
